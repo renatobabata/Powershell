@@ -34,11 +34,21 @@ pwsh
 
 # List default commands
 Get-Command
+Get-Command -verb "get"
+Get-Command -Noun "date"
 gcm
 
 # To get help about a specific command
-Get-Help <parameter>
+Get-Help <# parameter #>
+Get-Help Get-Command
+Get-Help Get-Command -Examples
+Get-Help Get-Command -Detailed
+Get-Help Get-Command -Full
+Get-Help Get-Command -Online
+Get-Command -?
 
-pwd
-
-
+# Alias
+## As best practices, Alias should not be used in scripts
+Get-Alias 
+Get-Alias dir
+Get-Alias -Definition "Get-ChildItem"
